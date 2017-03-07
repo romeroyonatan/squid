@@ -14,8 +14,8 @@ ADD squid.conf /etc/squid/squid.conf
 # create cache dirs
 RUN /usr/sbin/squid -N -f /etc/squid/squid.conf -z
 
-# expose volumes to configure squid and log dir
-VOLUME /etc/squid /var/log/squid
+# expose volumes to configure squid
+VOLUME /etc/squid
 
 # run squid
 CMD ["/usr/sbin/squid", "-f", "/etc/squid/squid.conf", "-N", "-d", "7"]

@@ -1,8 +1,8 @@
-FROM alpine:3.5
+FROM alpine:3.6
 
 LABEL maintainer "Yonatan Romero <yromero@openmailbox.org>"
 
-ENV VERSION "3.5.23-r0"
+ENV VERSION "3.5.23-r2"
 
 RUN apk update && apk add squid=$VERSION
 
